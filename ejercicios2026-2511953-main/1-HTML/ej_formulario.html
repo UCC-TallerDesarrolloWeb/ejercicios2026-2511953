@@ -18,26 +18,87 @@
     https://www.w3schools.com/html/tryit.asp?filename=tryhtml_elem_output-->
 
 <h3>Suscribase a Nuestro Portal de Noticias! Crear una cuenta es rápido!</h3>
-Nombre:
-Apellido:
-Sexo: Masculino Femenino
-Edad:
-Email:
-Usuario:
-Password:
-Confirmar Password:
+<form name="Suscripcion">
+    <fieldset>
+        <legend>Datos Personales</legend>
+        <p>
+            <label for="nombre"> Nombre:</label>
+            <input type="text" name="Nomrbe" placeholder="Ingrese su nombre" id="nombre">
+        </p>
+    
+        <p>
+            <label for="apellido">Apellido:</label>
+            <input type="text" name="Apellido" placeholder="Ingrese su apellido" id="apellido">
+        </p>
+    
+        <p>
+            Sexo:
+            <label for="masculino">Masculino</label> <input type="radio" name="sex" value="masculino" id="masculino">
+            <label for="femenino">Femenino</label><input type="radio" name="sex" value="femenino" id="femenino">
+        </p>
+    
+        <p>
+            <label for="edad">Edad:</label>
+            <input type="number" name="edad" placeholder="Edad" maxlength="3">
+        </p>
+    
+        <p>
+            <label for="email"> Email: </label>
+            <input type="email" name="email" placeholder="usuario@dominio.com" id="email">
+        </p>
+    
+    </fieldset>
 
-Tipo de servicio: Free / Standard / Premium
-Tema:
-Política
-Negocios
-Tecnología
-Salud
+    <fieldset>
+        <legend>Datos de la Cuenta</legend>
+        <p>
+            <label for="usuario">Usuario:</label>
+            <input type="text" name="usuario" placeholder="Nombre de Usuario" id="usuario">
+        </p>
+    
+        <p>
+            <label for="password">Password:</label>
+            <input type="password" name="password" placeholder="Contrasenia" id="password">
+        </p>
+    
+        <p>
+            <label for="confirmar password">Confirmar password:</label>
+            <input type="password" name="segunda-password" placeholder="Contrasenia" id="confirmar password">
+        </p>
+    </fieldset>
 
-Agregue un comentario:
+    <fieldset>
+        <legend>Tipos de Suscripcion</legend>
+        <p>
+            <label for="tipo de servicio">Tipo de servicio: Free / Standard / Premium</label>
+            <select name="tipo-servicio" id="tipo-servicio">
+                <option value="Free">Free</option>
+                <option value="Standard">Standard</option>
+                <option value="Premium">Premium</option>
+            </select>
+        </p>
+    
+        <p>
+            Tema:
+            <label for="politica">Politica</label> <input type="checkbox" value="politica" name="tema">
+            <label for="negocios">Negocios</label> <input type="checkbox" value="negocios" name="tema">
+            <label for="tecnologia">Tencologia</label><input type="checkbox" value="tecnologia" name="tema">
+            <label for="salud">Salud</label><input type="checkbox" value="salud" name="tema">
+        </p>
+    </fieldset>
 
-Boton de Enviar
+    <p>
+        <label for="comentario">Agregue un comentario:</label>
+        <textarea>
+            Deje su comentario...
+        </textarea>
+    </p>
 
-
+    <p>
+        <button type="button">
+            Enviar
+        </button>
+    </p>
+</form>
 </body>
 </html>
