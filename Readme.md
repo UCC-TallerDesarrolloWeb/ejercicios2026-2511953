@@ -40,7 +40,7 @@
 -  [x] Columnas
 -  [x] Grid
 -  [x] grid-areas
--  [ ] Mejora
+-  [x] Mejora
 -  [ ] Transitions
 -  [ ] Viewport
 -  [ ] Responsive
