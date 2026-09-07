@@ -37,11 +37,11 @@
 -  [x] CV
 -  [x] Backgrounds
 -  [ ] Position
--  [x] Columnas
+-  [x] 2 Columnas
 -  [x] Grid
 -  [x] grid-areas
 -  [x] Mejora
--  [ ] Transitions
+-  [x] Transitions
 -  [ ] Viewport
 -  [ ] Responsive
 
