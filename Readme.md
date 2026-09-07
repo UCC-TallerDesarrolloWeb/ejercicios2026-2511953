@@ -38,7 +38,7 @@
 -  [x] Backgrounds
 -  [ ] Position
 -  [x] Columnas
--  [ ] Grid
+-  [x] Grid
 -  [ ] grid-areas
 -  [ ] Mejora
 -  [ ] Transitions
