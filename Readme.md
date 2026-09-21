@@ -48,7 +48,7 @@
 
 -  [x] Hola Mundo!
 -  [x] Conversor de Unidades
--  [ ] Documentación
+-  [x] Documentación
 -  [ ] Grados a Radianes
 -  [ ] Refactorización
 -  [ ] Mostrar/Ocultar div
