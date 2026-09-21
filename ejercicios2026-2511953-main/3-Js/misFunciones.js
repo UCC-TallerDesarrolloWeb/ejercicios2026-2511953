@@ -92,7 +92,7 @@ function calcularSuma(){
     let sum1, sum2;
     sum1 = Number(document.getElementById("nums1").value);
     sum2 = Number(document.getElementById("nums2").value);
-    document.getElementById("totalS").value = Number(sum1) + Number(sum2);
+    document.getElementById("totalS").innerText = Number(sum1) + Number(sum2);
 }
 
 /**
@@ -103,7 +103,7 @@ function calcularResta(){
     let sum1, sum2;
     sum1 = Number(document.getElementById("numr1").value);
     sum2 = Number(document.getElementById("numr2").value);
-    document.getElementById("totalR").value = Number(sum1) - Number(sum2);
+    document.getElementById("totalR").innerText = Number(sum1) - Number(sum2);
 }
 
 /**
@@ -114,7 +114,7 @@ function calcularMultiplicacion(){
     let sum1, sum2;
     sum1 = Number(document.getElementById("numm1").value);
     sum2 = Number(document.getElementById("numm2").value);
-    document.getElementById("totalM").value = Number(sum1) * Number(sum2);
+    document.getElementById("totalM").innerText = Number(sum1) * Number(sum2);
 }
 
 /**
@@ -131,5 +131,5 @@ function calcularDivision(){
         return;
     }
 
-    document.getElementById("totalD").value = Number(sum1) / Number(sum2);
+    document.getElementById("totalD").innerText = Number(sum1) / Number(sum2);
 }
