@@ -109,10 +109,9 @@ agregarAlCarrito = (num) => {
     carritoList=[];
   }else{
     carritoList = JSON.parse(carritoList);
-    carritoList.push(num);
-    console.log(carritoList);
   }
 
+  carritoList.push(num);
   console.log(carritoList);
   localStorage.setItem("carrito", JSON.stringify(carritoList));
 }
