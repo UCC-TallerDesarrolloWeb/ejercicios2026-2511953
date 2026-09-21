@@ -58,7 +58,7 @@
 -  [x] Operaciones Matemáticas II
 -  [x] Renderizado Dinámico
 -  [x] Renderizado Dinámico del Dialog
--  [ ] Carrito de Compras con localstorage
+-  [x] Carrito de Compras con localstorage
 -  [ ] Vaciar Carrito y Eliminar Producto
 -  [ ] Filter
 -  [ ] Formatear Precio

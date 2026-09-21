@@ -94,6 +94,25 @@ mostrarCatalogo = () => {
                   <img src=" https://ucc-tallerdesarrolloweb.github.io/filminas/images/ejercicios/${producto.imagen}" alt="${producto.nombre}">
                   <h3>${producto.nombre}</h3>
                   <button type="button" onclick="mostrarModal(${id})">Ver detalle de Producto</button>
+                  <button type="button" onclick="agregarAlCarrito(${id})">Agregar al Carrito</button>
                 </div>`;
   })
+
+  document.getElementById("catalogo").innerHTML = contenido;
 };
+
+agregarAlCarrito = (num) => {
+  let carrito = localStorage.getItem("carrito");
+  console.log(carritoList);
+
+  if(carritoList ==[] || carritoList==null){
+    carritoList=[];
+  }else{
+    carritoList = JSON.parse(carritoList);
+    carritoList.push(num);
+    console.log(carritoList);
+  }
+
+  console.log(carritoList);
+  localStorage.setItem("carrito", JSON.stringify(carritoList));
+}
