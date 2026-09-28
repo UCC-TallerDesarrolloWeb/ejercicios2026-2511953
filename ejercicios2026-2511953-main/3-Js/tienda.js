@@ -122,6 +122,7 @@ agregarAlCarrito = (num) => {
   carritoList.push(num);
   console.log(carritoList);
   localStorage.setItem("carrito", JSON.stringify(carritoList));
+  contarProductos();
 }
 
 
@@ -142,7 +143,7 @@ mostrarCarrito = () => {
     carritoList.forEach((num) => {
     contenido += `<div>
                   <h3>${productos[num].nombre}</h3>
-                  <p>${productos[num].precio}</p>
+                  <p>${formatPrice.productos[num].precio}</p>
                   <button type=button onclick="eliminarProducto(${id})">Eliminar Producto</button>
                   </div>`;
     });
@@ -221,3 +222,27 @@ let filtrarProductos = () => {
 
   mostrarCatalogo(newLista);
 }
+
+
+/**
+ * Formate el precio $ 35.000,55
+ * @param {number} price 
+ * @returns {number} 
+ */
+let formatPrice = (price) => {
+  return new Intl.NumberFormat("es-AR", {
+    style: "currency",
+    currency : "ARS"
+  }).format(price);
+}
+
+
+let contarProductos = () => {
+  let carritoList = localStorage.getItem("carrito");
+  carritoList = JSON.parse(carritoList);
+
+  if(carritoList.lenght > 0){
+    document.getElementById("cant-prod").innerText = carritoList.lenght;
+  }
+}
+
