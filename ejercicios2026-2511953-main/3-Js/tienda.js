@@ -101,6 +101,13 @@ mostrarCatalogo = () => {
   document.getElementById("catalogo").innerHTML = contenido;
 };
 
+/**
+ * Agregar productos al carrito 
+ * @method agregarAlCarrito
+ * @param {number} num - id del producto que se desea agregar al carrito 
+ */
+
+
 agregarAlCarrito = (num) => {
   let carrito = localStorage.getItem("carrito");
   console.log(carritoList);
@@ -116,18 +123,62 @@ agregarAlCarrito = (num) => {
   localStorage.setItem("carrito", JSON.stringify(carritoList));
 }
 
+
+/**
+ * Muestra dinamicamente los productos que estan en el localstorage
+ * @method mostrarCarrito
+ */
+
 mostrarCarrito = () => {
   let carritoList = localStorage.getItem("carrito");
+  console.log(carritoList);
   let contenido = "";
 
-
-  carritoList = JSON.parse(carritoList);
-  carritoList.forEach((num) => {
+  if(carritoList==null){
+    contenido = `<div>Su carrito de compras esta vacio</div>`;
+  }else{
+    carritoList = JSON.parse(carritoList);
+    carritoList.forEach((num) => {
     contenido += `<div>
                   <h3>${productos[num].nombre}</h3>
                   <p>${productos[num].precio}</p>
-                  </div>`
-  });
+                  <button type=button onclick="eliminarProducto(${id})">Eliminar Producto</button>
+                  </div>`;
+    });
+
+    contenido += `<button type=button onclick="vaciarCarrito()>Vaciar Carrito</button>"`
+  }
 
   document.getElementById("carrito").innerHTML = contenido;
+}
+
+/**
+ * Vacia el carrito de compras eliminando el contenido de localstorage 
+ * @method vaciarCarrito
+ */
+let vaciarCarrito = () => {
+  localStorage.removeItem("carrito");
+  window.location.reload();
+
+}
+
+/**
+ * Elimina un producto puntual del localstorage
+ * @method eliminarProducto
+ * @param {number} id - Id del array del Localstorage
+ */
+
+let eliminarProducto = (id) => {
+  let carritoList = localStorage.getItem("carrito");
+  carritoList = JSON.parse(carritoList);
+
+  carritoList.splice(id,1);
+
+  if(carritoList.lenght > 0){
+    localStorage.setItem("carrito", JSON.stringify(carritoList));
+  }else{
+    localStorage.removeItem("carrito");
+  }
+  
+  window.location.reload();
 }
