@@ -246,3 +246,37 @@ let contarProductos = () => {
   }
 }
 
+let ordenarCatalogo = () => {
+  const opt = document.getElementById("order").value;
+  let newProductos;
+
+  switch(opt){
+    case "menor":
+      newPorductos = productos.sort((a,b) => a.precio - b.precio);
+    break;
+
+    case "mayor":
+      newPorductos = productos.sort((a,b) => b.precio - a.precio);
+    break;
+
+    case "a-z":
+      newProductos = productos.sort((a,b) => {
+        if(a.nombre.toLowerCase() < b.nombre.tolowerCase()){
+          return -1;
+        }else{
+          return 1;
+        }
+      })
+
+      case "z-a":
+      newProductos = productos.sort((a,b) => {
+        if(a.nombre.toLowerCase() > b.nombre.tolowerCase()){
+          return -1;
+        }else{
+          return 1;
+        }
+      })
+  }
+
+  mostrarCatalogo(newProductos);
+}

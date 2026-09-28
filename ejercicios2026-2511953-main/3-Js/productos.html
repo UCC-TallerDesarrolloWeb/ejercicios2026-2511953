@@ -54,6 +54,15 @@
                     </p>
                 </fieldset>
                 <fieldset>
+                    <legend>Ordenar Catalogo</legend>
+                    <select id="order" onchange="odernarCatalogo()">
+                        <option value="mayor">por Precio - de Mayor a Menor</option>
+                        <option value="menor">por Precio - de Menor a Mayor</option>
+                        <option value="a-z">por Nombre - de A-Z</option>
+                        <option value="z-a">por Nombre - de Z-A</option>
+                    </select>
+                </fieldset>
+                <fieldset>
                     <legend>Marca</legend>
                     <select id="marca" onchange="filtrarProductos()">
                         <option value="todas">Todas</option>
