@@ -1,66 +1,46 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Instagram</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
 
-    <style>    
-    @media screen(width>600px){
-       body{
-            column-count: 3;
-       }
-    }
+    <style>
+        body {
+            margin: 0;
+        }
 
-    @media screen(width<=600px){
-       body{
-            column-count: 1;
-       }
-    }
-    
-    img{
-        width: 100%;
+        .galeria {
+            display: grid;
+            grid-template-columns: 1fr;   /* móvil: 1 columna */
+            gap: 4px;
+        }
 
-    }
+        .galeria img {
+            width: 100%;
+            display: block;
+        }
+
+        @media screen and (min-width: 601px) {
+            .galeria {
+                grid-template-columns: repeat(3, 1fr);   /* 3 columnas */
+            }
+        }
     </style>
 </head>
 <body>
 
-<div>
-    <div>
-        <img src="https://ucc-tallerdesarrolloweb.github.io/filminas/images/ejercicios/satoshito89_01.png">
-    </div>
-    <div>
-        <img src="https://ucc-tallerdesarrolloweb.github.io/filminas/images/ejercicios/satoshito89_02.png">
-    </div>
-    <div>
-        <img src="https://ucc-tallerdesarrolloweb.github.io/filminas/images/ejercicios/satoshito89_03.png">
-    </div>
+<div class="galeria">
+    <img src="https://ucc-tallerdesarrolloweb.github.io/filminas/images/ejercicios/satoshito89_01.png" alt="Foto 1">
+    <img src="https://ucc-tallerdesarrolloweb.github.io/filminas/images/ejercicios/satoshito89_02.png" alt="Foto 2">
+    <img src="https://ucc-tallerdesarrolloweb.github.io/filminas/images/ejercicios/satoshito89_03.png" alt="Foto 3">
+    <img src="https://ucc-tallerdesarrolloweb.github.io/filminas/images/ejercicios/satoshito89_04.png" alt="Foto 4">
+    <img src="https://ucc-tallerdesarrolloweb.github.io/filminas/images/ejercicios/satoshito89_05.png" alt="Foto 5">
+    <img src="https://ucc-tallerdesarrolloweb.github.io/filminas/images/ejercicios/satoshito89_06.png" alt="Foto 6">
+    <img src="https://ucc-tallerdesarrolloweb.github.io/filminas/images/ejercicios/satoshito89_07.png" alt="Foto 7">
+    <img src="https://ucc-tallerdesarrolloweb.github.io/filminas/images/ejercicios/satoshito89_08.png" alt="Foto 8">
+    <img src="https://ucc-tallerdesarrolloweb.github.io/filminas/images/ejercicios/satoshito89_09.png" alt="Foto 9">
 </div>
 
-<div>
-    <div>
-        <img src="https://ucc-tallerdesarrolloweb.github.io/filminas/images/ejercicios/satoshito89_04.png">
-    </div>
-    <div>
-        <img src="https://ucc-tallerdesarrolloweb.github.io/filminas/images/ejercicios/satoshito89_05.png">
-    </div>
-    <div>
-        <img src="https://ucc-tallerdesarrolloweb.github.io/filminas/images/ejercicios/satoshito89_06.png">
-    </div>
-</div>
-
-<div>
-    <div>
-        <img src="https://ucc-tallerdesarrolloweb.github.io/filminas/images/ejercicios/satoshito89_07.png">
-    </div>
-    <div>
-        <img src="https://ucc-tallerdesarrolloweb.github.io/filminas/images/ejercicios/satoshito89_08.png">
-    </div>
-    <div>
-        <img src="https://ucc-tallerdesarrolloweb.github.io/filminas/images/ejercicios/satoshito89_09.png">
-    </div>
-</div>
 </body>
 </html>
