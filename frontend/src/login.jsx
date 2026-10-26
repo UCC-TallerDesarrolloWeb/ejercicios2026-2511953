@@ -8,11 +8,11 @@ const Login = ({ setIsLoggedIn }) => {
   const navigate = useNavigate();
 
   const handleSubmit = (e) => {
-    e.preventDefault(); // evita que el form recargue la página
+    e.preventDefault(); 
 
     if (username === 'admin' && password === 'admin') {
       console.log('Login OK');
-      setIsLoggedIn(true); // guarda la sesión en App
+      setIsLoggedIn(true); 
       navigate('/actividades');
     } else {
       console.log('Login Incorrecto');
