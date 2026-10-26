@@ -9,20 +9,13 @@ const Header = ({ isLoggedIn, setIsLoggedIn }) => {
   };
 
   return (
-    <header className="header">
-      <span className="header__logo">Gimnasio</span>
-
-      <nav className="header__nav">
-        <NavLink to="/" end>Home</NavLink>
-        {!isLoggedIn && <NavLink to="/login">Login</NavLink>}
-        <NavLink to="/actividades">Actividades</NavLink>
-      </nav>
-
-      {isLoggedIn && (
-        <button className="header__logout" onClick={handleLogout}>
-          Logout
-        </button>
-      )}
+    <header>
+        <h1>GYM</h1>
+          <nav>
+            <a href="/">Home</a>
+            <a href="/login">Login</a>
+            <a href="/actividades">Actividades</a> 
+          </nav>
     </header>
   );
 };

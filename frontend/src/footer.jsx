@@ -1,7 +1,7 @@
 const Footer = () => {
   return (
     <footer className="footer">
-      <p>© 2026 Gimnasio. Todos los derechos reservados.</p>
+      <p>&copy; {new Date().getFullYear()} My Website</p>
     </footer>
   );
 };

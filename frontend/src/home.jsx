@@ -12,16 +12,10 @@ const actividades = [
 
 const Home = () => {
   return (
-    <section className="home-page">
+    <section>
       <h1>Nuestras actividades</h1>
-
-      <div className="home-grid">
-        {actividades.map((actividad) => (
-          <article className="home-card" key={actividad.titulo}>
-            <img src={actividad.imagen} alt={actividad.titulo} />
-            <h2>{actividad.titulo}</h2>
-          </article>
-        ))}
+      <div>
+        <h2>En esta pagina hay info del gym</h2>
       </div>
     </section>
   );
